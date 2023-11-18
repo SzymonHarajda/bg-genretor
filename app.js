@@ -2,6 +2,14 @@ var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var css = document.querySelector("h3");
 var body = document.getElementById("gradient");
+var btn = document.querySelector("button");
+
+btn.addEventListener("click", ()=>{
+    color1.value="#"+Math.floor(Math.random()*16777215).toString(16);
+    color2.value="#"+Math.floor(Math.random()*16777215).toString(16);
+    changeBg();
+})
+changeBg();
 
 function changeBg(){
     body.style.background = "linear-gradient(to right, " 
